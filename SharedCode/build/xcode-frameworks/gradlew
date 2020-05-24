@@ -1,0 +1,4 @@
+#!/bin/bash
+export 'JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home'
+cd '/Users/omuomugin/workspace/github.com/omuomugin/KMPPSandbox'
+./gradlew $@

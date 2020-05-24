@@ -3,7 +3,7 @@ package io.omuomugin.KMPPSandbox
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import io.omuomugin.KMPPSandbox.SharedCode.createApplicationScreenMessage
+import io.omuomugin.KMPPSandbox.common.createApplicationScreenMessage
 
 class MainActivity : AppCompatActivity() {
 

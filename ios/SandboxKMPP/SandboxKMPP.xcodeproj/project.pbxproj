@@ -15,8 +15,8 @@
 		FC747919247A19C7002CA388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC747917247A19C7002CA388 /* LaunchScreen.storyboard */; };
 		FC747924247A19C8002CA388 /* SandboxKMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC747923247A19C8002CA388 /* SandboxKMPPTests.swift */; };
 		FC74792F247A19C8002CA388 /* SandboxKMPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74792E247A19C8002CA388 /* SandboxKMPPUITests.swift */; };
-		FC74793E247A19F4002CA388 /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC74793D247A19F4002CA388 /* SharedCode.framework */; };
-		FC74793F247A19F4002CA388 /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC74793D247A19F4002CA388 /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC747943247A3512002CA388 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC747942247A3512002CA388 /* common.framework */; };
+		FC747944247A3512002CA388 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC747942247A3512002CA388 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FC747940247A19F4002CA388 /* Embed Frameworks */ = {
+		FC747945247A3512002CA388 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FC74793F247A19F4002CA388 /* SharedCode.framework in Embed Frameworks */,
+				FC747944247A3512002CA388 /* common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +66,7 @@
 		FC74792E247A19C8002CA388 /* SandboxKMPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxKMPPUITests.swift; sourceTree = "<group>"; };
 		FC747930247A19C8002CA388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC74793D247A19F4002CA388 /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		FC747942247A3512002CA388 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = "../../common/build/xcode-frameworks/common.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC74793E247A19F4002CA388 /* SharedCode.framework in Frameworks */,
+				FC747943247A3512002CA388 /* common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +159,7 @@
 		FC74793C247A19F4002CA388 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC747942247A3512002CA388 /* common.framework */,
 				FC74793D247A19F4002CA388 /* SharedCode.framework */,
 			);
 			name = Frameworks;
@@ -174,7 +176,7 @@
 				FC747905247A19C7002CA388 /* Sources */,
 				FC747906247A19C7002CA388 /* Frameworks */,
 				FC747907247A19C7002CA388 /* Resources */,
-				FC747940247A19F4002CA388 /* Embed Frameworks */,
+				FC747945247A3512002CA388 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,7 +309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/../../SharedCode/build/xcode-frameworks\"\n./gradlew :SharedCode:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/../../common/build/xcode-frameworks\"\n./gradlew :common:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -486,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SandboxKMPP/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../common/build/xcode-frameworks";
 				INFOPLIST_FILE = SandboxKMPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,7 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SandboxKMPP/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../common/build/xcode-frameworks";
 				INFOPLIST_FILE = SandboxKMPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

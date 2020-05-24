@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import SharedCode
+import common
 
 struct ContentView: View {
     let message = CommonKt.createApplicationScreenMessage()
